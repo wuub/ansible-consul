@@ -1,7 +1,7 @@
 [Unit]
 Description=Consul Agent
-Requires=network-online.target
-After=network-online.target
+After=network.target
+
 
 [Service]
 Environment="GOMAXPROCS=`nproc`"
