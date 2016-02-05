@@ -124,7 +124,7 @@
     mode=0755
   when: consul_use_upstart and ansible_os_family == "Debian"
   notify:
-    - restart consul
+    - reload consul
 
 - name: copy consul systemd script
   template: >
@@ -136,7 +136,7 @@
   when: consul_use_systemd
   notify:
     - reload systemd
-    - restart consul
+    - reload consul
 
 - name: copy consul init.d script
   template: >
