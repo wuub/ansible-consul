@@ -60,6 +60,7 @@ consul_syslog: false
 consul_rejoin_after_leave: true
 consul_leave_on_terminate: false
 consul_join_at_start: false
+consul_skip_leave_on_interrupt: false
 
 consul_bind_address: "0.0.0.0"
 consul_dynamic_bind: false
