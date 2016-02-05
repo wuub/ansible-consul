@@ -28,6 +28,7 @@ consul_config_dir: /etc/consul.d
 consul_config_file: /etc/consul.conf
 consul_log_file: /var/log/consul
 consul_data_dir: "{{ consul_home }}/data"
+consul_symlink: /usr/local/bin/consul
 
 consul_dns_allow_stale: false
 consul_dns_max_stale: 5s

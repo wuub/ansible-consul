@@ -68,6 +68,14 @@
     copy=no
   when: consul_was_downloaded|changed
 
+- name: create symlink to consul
+  file: >
+    src={{ consul_home }}/bin/consul
+    dest={{ consul_symlink }}
+    owner={{ consul_user }}
+    group={{ consul_group }}
+    state=link
+
 - name: create TLS key
   no_log: True
   copy: >
